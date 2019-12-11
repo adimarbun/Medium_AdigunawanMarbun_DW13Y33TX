@@ -4,6 +4,7 @@ import Login from './pages/login'
 import Home from './pages/home'
 import CategoryPage from './pages/categoryPage'
 import ArticelDetail from './pages/articelDetail'
+import Follow from './pages/follow'
 import {
   BrowserRouter as Router,
   Switch,
@@ -29,6 +30,9 @@ class App extends Component {
           </Route>
           <Route path="/articelDetail">
             <ArticelDetail/>
+          </Route>
+          <Route path="/follow">
+            <Follow/>
           </Route>
           <Route path="/">
             <Register />
