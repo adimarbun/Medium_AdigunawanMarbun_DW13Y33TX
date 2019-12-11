@@ -14,6 +14,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import Button from '@material-ui/core/Button';
+import Link from '@material-ui/core/Link';
 
 
 
@@ -148,9 +149,10 @@ export default function NavBar() {
             aria-label="open drawer"
           >
           </IconButton>
+          <Link href=" home">
           <Typography className={classes.title} variant="h4" noWrap>
-            Medium
-          </Typography>
+           <strong>Medium</strong> 
+          </Typography></Link>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <IconButton aria-label="show 17 new notifications" color="inherit">

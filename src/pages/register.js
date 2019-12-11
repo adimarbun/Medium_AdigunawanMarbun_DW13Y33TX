@@ -50,7 +50,7 @@ export default function Register() {
           <CssBaseline />
           <div className={classes.paper}>
             <Typography  variant="h4" >
-              Join Medium.
+              <strong>Join Medium.</strong>
             </Typography>
             <p>Create an account to receive great stories in your inbox, personalize your homepage, and follow authors and topics that you love.</p> 
             <form className={classes.form} noValidate>

@@ -95,6 +95,7 @@ componentDidMount() {
                   />
                   <Button
                     type="submit"
+                    href="home"
                     variant="contained"
                     color="primary"
                     style={{marginTop:"40px"}}

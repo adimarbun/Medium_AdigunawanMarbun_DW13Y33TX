@@ -28,7 +28,7 @@ export default function GridTwoHome() {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
-        <Grid item >
+        <Grid item xs={7} >
         <Paper className={classes.paper}>
             <Grid container wrap="nowrap" spacing={2}>
                 <Grid item xs>
