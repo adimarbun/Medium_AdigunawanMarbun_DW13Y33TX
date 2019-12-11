@@ -4,6 +4,7 @@ import Login from './pages/login'
 import Home from './pages/home'
 import CategoryPage from './pages/categoryPage'
 import ArticelDetail from './pages/articelDetail'
+import RelatedArticle from './pages/relatedArticle'
 import Follow from './pages/follow'
 import Comment from './pages/comment'
 import {
@@ -37,6 +38,9 @@ class App extends Component {
           </Route>
           <Route path="/comment">
             <Comment/>
+          </Route>
+          <Route path="/relatedArticle">
+            <RelatedArticle/>
           </Route>
           <Route path="/">
             <Register />
