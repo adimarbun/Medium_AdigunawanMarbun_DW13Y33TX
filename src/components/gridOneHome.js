@@ -24,19 +24,19 @@ export default function GridOneHome() {
       <Paper className={classes.paper}>
         <Grid container spacing={1}>
           <Grid item xs >
-            <div>
+            <Link href="articelDetail">
               <div>
                 <img 
-                  src="https://miro.medium.com/max/2649/1*T_wCY9dpnq1jw-AM7BzZ2w.jpeg"
+                  src="https://miro.medium.com/max/2500/1*-T8oo_JoKkMxfnPKLt_Ciw.jpeg"
                   width="100%"
                   height="200px"
                   />
               </div>
               <div style={{marginLeft:"60px"}}>
-                  <h3>10 Bad Habits of Unsuccessfuk People</h3>
-                  <p>Here are 10 of the most common self-imposed barriers. If you find yourself bumping up against one, use them as a signal to reevaluate, reflect, and reverse course.</p>
+                  <h3>If You Only Read A Few Books In 2018, Read These</h3>
+                  <p>If you’d liked to be jerked around less, provoked less, and more productive and inwardly focused, where should you start?</p>
               </div>
-            </div>
+            </Link>
           </Grid>
           <Grid item xs>
             <div >

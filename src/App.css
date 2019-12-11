@@ -66,3 +66,24 @@
 .scroll-menu-arrow {
   cursor: pointer;
 }
+.follow-root {
+    flex-grow: 1;
+    margin: 100px 20% 100px 20%;
+}
+ .follow-paper {
+  width:"100%";
+  margin: 20px 0 20px 0;
+  background-color: azure;
+  }
+ .follow-tombol{
+
+text-transform: lowercase;
+color:red;
+ }
+.buttonn{
+  text-transform: capitalize;
+  margin-top: 100px; 
+  background-color: royalblue;
+  }
+ 
+ 
