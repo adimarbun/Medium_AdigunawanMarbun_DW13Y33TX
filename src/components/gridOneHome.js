@@ -24,6 +24,7 @@ export default function GridOneHome() {
       <Paper className={classes.paper}>
         <Grid container spacing={1}>
           <Grid item xs >
+            <Link href="articelDetail">
               <div>
                 <img 
                   src="https://miro.medium.com/max/2500/1*-T8oo_JoKkMxfnPKLt_Ciw.jpeg"
@@ -34,7 +35,8 @@ export default function GridOneHome() {
               <div style={{marginLeft:"60px"}}>
                   <h3>If You Only Read A Few Books In 2018, Read These</h3>
                   <p>If you’d liked to be jerked around less, provoked less, and more productive and inwardly focused, where should you start?</p>
-              </div>  
+              </div> 
+              </Link> 
           </Grid>
           <Grid item xs>
             <div >
