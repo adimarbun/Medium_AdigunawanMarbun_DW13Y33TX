@@ -74,6 +74,7 @@ componentDidMount() {
                     margin="normal"
                     required
                     fullWidth
+                    type="email"
                     id="email"
                     value={this.state.email} onChange={this.handleChange}
                     label="Email Address"

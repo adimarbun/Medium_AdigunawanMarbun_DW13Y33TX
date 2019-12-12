@@ -69,7 +69,7 @@ class Follow extends Component {
                 </Grid>
             </Grid>
             <Paper>
-                <Grid style={{marginLeft:"5vw"}}>
+                <Grid style={{marginLeft:"5"}}>
                     < Typography > 
                         WRITTEN BY
                     </Typography>

@@ -28,8 +28,8 @@ class App extends Component {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/home">
-            <Home />
+          <Route path="/regiter">
+            <Register/>
           </Route>
           <Route path="/categoryPage">
             <CategoryPage/>
@@ -61,12 +61,14 @@ class App extends Component {
           <Route path="/profile">
             <Profile/>
           </Route>
+          <Route path="/register">
+            <Register/>
+          </Route>
           <Route path="/">
-            <Register />
+            <Home />
           </Route>
         </Switch>
      </Router>
-   
    );
  }
 }
