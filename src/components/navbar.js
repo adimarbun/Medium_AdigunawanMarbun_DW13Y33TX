@@ -119,9 +119,13 @@ export default function NavBar() {
           <MenuItem>
           <Link href="story" color="inherit" underline="none">Stories</Link>
           </MenuItem>
-          <MenuItem>Stats</MenuItem>
+          <MenuItem>
+          <Link href="stats" color="inherit" underline="none">Stats</Link>
+          </MenuItem>
         </Paper>
-        <MenuItem>Booksmarks</MenuItem>
+        <MenuItem>
+          <Link href="bookmark" color="inherit" underline="none">Booksmaks</Link>
+        </MenuItem>
         <MenuItem>Profile</MenuItem>
         <MenuItem>Setting</MenuItem>
         <MenuItem>Help</MenuItem>
@@ -208,7 +212,9 @@ export default function NavBar() {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <AccountCircle />
+               <Fab color="secondary" aria-label="image" size="small">
+                AM
+              </Fab>
             </IconButton>
           </div>
           <div className={classes.sectionMobile}>
