@@ -7,11 +7,11 @@ import ArticelDetail from './pages/articelDetail'
 import RelatedArticle from './pages/relatedArticle'
 import Follow from './pages/follow'
 import Comment from './pages/comment'
+import NewStory from './pages/newStory'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  
 } from "react-router-dom";
 
 
@@ -41,6 +41,9 @@ class App extends Component {
           </Route>
           <Route path="/relatedArticle">
             <RelatedArticle/>
+          </Route>
+          <Route path="/newStory">
+            <NewStory/>
           </Route>
           <Route path="/">
             <Register />
