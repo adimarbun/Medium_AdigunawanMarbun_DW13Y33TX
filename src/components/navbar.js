@@ -1,10 +1,9 @@
 import React from 'react';
-import { fade, makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
@@ -13,8 +12,9 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
+import { Paper, Grid } from '@material-ui/core';
+import Fab from '@material-ui/core/Fab';
 
 
 
@@ -60,7 +60,6 @@ export default function NavBar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
@@ -92,8 +91,40 @@ export default function NavBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <div style={{width:"20vw"}}>
+        <Grid container wrap="nowrap" item xs={12}>
+            <Grid item xs={3}>
+              <Fab color="secondary" aria-label="image">
+                AM
+              </Fab> 
+            </Grid>
+            <Grid item xs={8}>
+              <Typography variant="h6">
+                Adigunawan Marbun
+              </Typography>
+              <Typography variant="subtitle2">
+                adigunawan1405@gmail.com
+              </Typography>
+            </Grid>
+        </Grid>
+        <Grid item xs={12} style={{margin:"20px 20px 20px 20px",color:"green"}}>
+            <Typography >
+              Become a member
+            </Typography>
+        </Grid>
+        <Paper>
+          <MenuItem>New Stories</MenuItem>
+          <MenuItem>Stories</MenuItem>
+          <MenuItem>Stats</MenuItem>
+        </Paper>
+        <MenuItem>Booksmarks</MenuItem>
+        <MenuItem>Profile</MenuItem>
+        <MenuItem>Setting</MenuItem>
+        <MenuItem>Help</MenuItem>
+        <MenuItem>
+          <Link href="login" color="inherit">SignOut</Link>
+        </MenuItem>
+      </div>
     </Menu>
   );
 
