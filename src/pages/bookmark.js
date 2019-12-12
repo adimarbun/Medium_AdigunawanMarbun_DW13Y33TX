@@ -1,15 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
 import NavBar from '../components/navbar';
 import Grid from '@material-ui/core/Grid';
 import { Typography } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
-import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
-import Box from '@material-ui/core/Box';
 import BookmarkIcon from '@material-ui/icons/Bookmark';
 
   
@@ -37,7 +31,7 @@ export default function Bookmark() {
   return (
     <Grid className={classes.root}>
         <NavBar/>
-        <Grid  xs={12} style={{margin:"5% 10% 20px 10%"}} >
+        <Grid  xs={12} style={{margin:"10px 10% 20px 10%"}} >
             <Grid item xs={8} >
                 <Typography variant="h3">
                     <strong>Bokmarks</strong>

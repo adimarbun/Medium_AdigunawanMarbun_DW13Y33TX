@@ -126,7 +126,9 @@ export default function NavBar() {
         <MenuItem>
           <Link href="bookmark" color="inherit" underline="none">Booksmaks</Link>
         </MenuItem>
-        <MenuItem>Profile</MenuItem>
+        <MenuItem>
+          <Link href="profile" color="inherit" underline="none">Profile</Link>
+        </MenuItem>
         <MenuItem>Setting</MenuItem>
         <MenuItem>Help</MenuItem>
         <MenuItem>

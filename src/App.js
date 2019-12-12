@@ -11,6 +11,7 @@ import NewStory from './pages/newStory'
 import Story from './pages/story'
 import Stats from './pages/stats'
 import Bookmark from './pages/bookmark'
+import Profile from './pages/profile'
 import {
   BrowserRouter as Router,
   Switch,
@@ -56,6 +57,9 @@ class App extends Component {
           </Route>
           <Route path="/bookmark">
             <Bookmark/>
+          </Route>
+          <Route path="/profile">
+            <Profile/>
           </Route>
           <Route path="/">
             <Register />
