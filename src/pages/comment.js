@@ -64,7 +64,7 @@ class Comment extends Component {
                         <Grid container  wrap="nowrap" style={{width:"62vw" ,margin:"10px 10px 10px 10px"}}>
                             <Grid item xs={9} style={{margin:"10px 10px 10px 10px"}} >
                                 <Typography variant="h5">
-                                    If you oly Read a Fews Books in 2019, read these,..
+                                    10 bad habbits of unseccusfull people
                                 </Typography>  
                                 <p>Adi Marbun</p>
                             </Grid>

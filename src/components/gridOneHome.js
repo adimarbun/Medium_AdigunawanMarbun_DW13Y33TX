@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { width } from '@material-ui/system';
 import { Typography,Link } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
@@ -24,7 +23,7 @@ export default function GridOneHome() {
       <Paper className={classes.paper}>
         <Grid container spacing={1}>
           <Grid item xs >
-            <Link href="articelDetail">
+            <Link href="articelDetail" color="inherit" underline="none">
               <div>
                 <img 
                   src="https://miro.medium.com/max/2500/1*-T8oo_JoKkMxfnPKLt_Ciw.jpeg"
@@ -108,7 +107,9 @@ export default function GridOneHome() {
           </Grid>
         </Grid>
         <Grid xs={12} style={{textAlign:"right",marginRight:"10%"}}>
-          <Link color="primary"><strong>SEE ALL FEATURED ></strong></Link>
+          <Link color="primary">
+            <strong>SEE ALL FEATURED ></strong>
+          </Link>
         </Grid>
       </Paper>
     </div>

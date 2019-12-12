@@ -5,6 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import CategoryPage from '../components/navbar'
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
+import Follow from './follow';
+import RelatedArticle from './relatedArticle';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -59,8 +61,8 @@ export default function ArticelDetail() {
                 
             </Grid>
         </div>
-    </div>
-        
-    
+        <Follow/>
+        <RelatedArticle/>
+    </div>  
   );
 }

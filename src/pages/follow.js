@@ -103,7 +103,7 @@ class Follow extends Component {
                 </Grid>
             </Paper>
             <Grid item xs={12}>
-                <Button variant="outlined"  href="#outlined-buttons" fullWidth style={{textTransform:"capitalize" ,color:"green"}}>
+                <Button variant="outlined"  href="comment" fullWidth style={{textTransform:"capitalize" ,color:"green"}}>
                     See Responses (215)
                 </Button>
             </Grid>

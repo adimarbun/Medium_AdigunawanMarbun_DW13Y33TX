@@ -8,6 +8,7 @@ import RelatedArticle from './pages/relatedArticle'
 import Follow from './pages/follow'
 import Comment from './pages/comment'
 import NewStory from './pages/newStory'
+import Story from './pages/story'
 import {
   BrowserRouter as Router,
   Switch,
@@ -44,6 +45,9 @@ class App extends Component {
           </Route>
           <Route path="/newStory">
             <NewStory/>
+          </Route>
+          <Route path="/story">
+            <Story/>
           </Route>
           <Route path="/">
             <Register />

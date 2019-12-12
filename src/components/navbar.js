@@ -113,8 +113,12 @@ export default function NavBar() {
             </Typography>
         </Grid>
         <Paper>
-          <MenuItem>New Stories</MenuItem>
-          <MenuItem>Stories</MenuItem>
+          <MenuItem>
+          <Link href="newStory" color="inherit" underline="none">New Story</Link>
+          </MenuItem>
+          <MenuItem>
+          <Link href="story" color="inherit" underline="none">Stories</Link>
+          </MenuItem>
           <MenuItem>Stats</MenuItem>
         </Paper>
         <MenuItem>Booksmarks</MenuItem>
@@ -122,7 +126,7 @@ export default function NavBar() {
         <MenuItem>Setting</MenuItem>
         <MenuItem>Help</MenuItem>
         <MenuItem>
-          <Link href="login" color="inherit">SignOut</Link>
+          <Link href="login" color="inherit" underline="none">SignOut</Link>
         </MenuItem>
       </div>
     </Menu>
@@ -180,7 +184,7 @@ export default function NavBar() {
             aria-label="open drawer"
           >
           </IconButton>
-          <Link href=" home">
+          <Link href=" home" color="inherit" underline="none">
           <Typography className={classes.title} variant="h4" noWrap>
            <strong>Medium</strong> 
           </Typography></Link>
