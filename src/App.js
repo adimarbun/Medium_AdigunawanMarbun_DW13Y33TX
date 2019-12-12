@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Register from './pages/register';
+import React, { Component } from 'react'
+import Register from './pages/register'
 import Login from './pages/login'
 import Home from './pages/home'
 import CategoryPage from './pages/categoryPage'
@@ -9,6 +9,7 @@ import Follow from './pages/follow'
 import Comment from './pages/comment'
 import NewStory from './pages/newStory'
 import Story from './pages/story'
+import Stats from './pages/stats'
 import {
   BrowserRouter as Router,
   Switch,
@@ -48,6 +49,9 @@ class App extends Component {
           </Route>
           <Route path="/story">
             <Story/>
+          </Route>
+          <Route path="/stats">
+            <Stats/>
           </Route>
           <Route path="/">
             <Register />
