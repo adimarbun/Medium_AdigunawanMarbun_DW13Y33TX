@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { Typography,IconButton, Link } from '@material-ui/core';
 import Fab from '@material-ui/core/Fab';
 import '../App.css'
-import NavBar from '../components/navbar'
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
-import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
-import BookmarkIcon from '@material-ui/icons/Bookmark';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import TextField from '@material-ui/core/TextField';
+
 
 class ArticleDetail extends Component {
     constructor(props){

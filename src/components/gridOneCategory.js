@@ -49,15 +49,15 @@ export default function CenteredGrid() {
             </Grid>
             <Grid item xs>
                 <Paper className={classes.paper}>
-                    <Grid container wrap="nowrap" spacing={0}>
-                        <Card>
+                    <Grid container wrap="nowrap" >
+                        <Grid xs={6}>
                         <img 
                             src="https://miro.medium.com/max/3688/1*Aj6EonMciZjMayKzRbIuvQ.jpeg"
-                            width="700vh" 
+                            width="100%" 
                             height="350vh"  
                         />
-                        </Card>
-                        <Card style={{width:"40vw", marginLeft:"10px",paddingTop:"90px",textAlign:"center",alignItems:"center",backgroundColor:"#3300CC"}}> 
+                        </Grid>
+                        <Grid style={{width:"40vw", marginLeft:"10px",paddingTop:"90px",textAlign:"center",alignItems:"center",backgroundColor:"#E0FFFF"}}> 
                                 <h1>Plastic Surgeons Are Using Eye-Tracking Tech to Make Better Breasts</h1>
                                 <p>But the eye doesn’t necessarily gaze at what is beautiful</p>
                                 <p>Yasmin Tayag
@@ -65,7 +65,7 @@ export default function CenteredGrid() {
                                 ·
                                 5 min read</p>
         
-                        </Card>
+                        </Grid>
                     </Grid>
                 </Paper>
             </Grid>

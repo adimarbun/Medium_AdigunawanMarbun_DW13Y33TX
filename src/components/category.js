@@ -40,8 +40,9 @@ function a11yProps(index) {
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    width: "100%",
     backgroundColor: theme.palette.background.paper,
+    padding:"0 10%",
+    marginTop:"8px"
   },
 }));
 
