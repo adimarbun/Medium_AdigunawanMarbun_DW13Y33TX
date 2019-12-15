@@ -17,19 +17,18 @@ import { Paper, Grid } from '@material-ui/core';
 import Fab from '@material-ui/core/Fab';
 
 
-
 const useStyles = makeStyles(theme => ({
   grow: {
     flexGrow: 1,
+  },
+  container:{
+    padding:"0 6%"
   },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   title: {
-    display: 'none',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
-    },
+    fontSize:"30px"
   },
   inputRoot: {
     color: 'inherit',
@@ -127,7 +126,7 @@ export default function NavBar() {
           <Link href="bookmark" color="inherit" underline="none">Booksmaks</Link>
         </MenuItem>
         <MenuItem>
-          <Link href="profile" color="inherit" underline="none">Profile</Link>
+          <Link href="articleByPerson" color="inherit" underline="none">Profile</Link>
         </MenuItem>
         <MenuItem>Setting</MenuItem>
         <MenuItem>Help</MenuItem>
@@ -150,16 +149,16 @@ export default function NavBar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <MailIcon />
+        <IconButton  color="inherit">
+          <Badge  color="secondary">
+                <SearchIcon/>
           </Badge>
         </IconButton>
-        <p>Messages</p>
+        <p>Search</p>
       </MenuItem>
       <MenuItem>
         <IconButton aria-label="show 11 new notifications" color="inherit">
-          <Badge badgeContent={11} color="secondary">
+          <Badge  color="secondary">
             <NotificationsIcon />
           </Badge>
         </IconButton>
@@ -181,7 +180,7 @@ export default function NavBar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static" color="inherit">
+      <AppBar position="static" color="inherit" className={classes.container}>
         <Toolbar>
           <IconButton
             edge="start"
@@ -191,17 +190,17 @@ export default function NavBar() {
           >
           </IconButton>
           <Link href=" home" color="inherit" underline="none">
-          <Typography className={classes.title} variant="h4" noWrap>
+          <Typography className={classes.title}  noWrap>
            <strong>Medium</strong> 
           </Typography></Link>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
+            <IconButton  color="inherit">
               <Badge  color="secondary">
                 <SearchIcon/>
               </Badge>
             </IconButton>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
+            <IconButton  color="inherit">
               <Badge  color="secondary">
                 <NotificationsIcon />
               </Badge>
@@ -214,7 +213,7 @@ export default function NavBar() {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-               <Fab color="secondary" aria-label="image" size="small">
+              <Fab color="secondary" aria-label="image" size="small">
                 AM
               </Fab>
             </IconButton>

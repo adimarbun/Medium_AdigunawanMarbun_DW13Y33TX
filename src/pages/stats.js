@@ -67,7 +67,6 @@ function TabPanel(props) {
 export default function Stats() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -75,7 +74,7 @@ export default function Stats() {
   return (
     <Grid className={classes.root}>
         <NavBar/>
-        <Grid item xs={12} style={{margin:"0 10% 0 10%"}}>
+        <Grid item xs={12} style={{margin:"0 14% 0 14%"}}>
             <Grid >
                 <Grid item xs={12} style={{margin:"60px 0 20px 0"}}>
                     <Typography variant="h3">

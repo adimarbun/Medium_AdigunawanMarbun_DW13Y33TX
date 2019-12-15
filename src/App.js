@@ -12,6 +12,7 @@ import Story from './pages/story'
 import Stats from './pages/stats'
 import Bookmark from './pages/bookmark'
 import Profile from './pages/profile'
+import ArticleByPerson from './pages/articleByPerson'
 import {
   BrowserRouter as Router,
   Switch,
@@ -63,6 +64,9 @@ class App extends Component {
           </Route>
           <Route path="/register">
             <Register/>
+          </Route>
+          <Route path="/articleByPerson">
+            <ArticleByPerson/>
           </Route>
           <Route path="/">
             <Home />

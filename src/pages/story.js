@@ -59,6 +59,9 @@ function TabPanel(props) {
       flexGrow: 1,
       backgroundColor: theme.palette.background.paper,
     },
+    container:{
+      margin:"0 15% 0 15%"
+    },
     button:{
         textTransform:"capitalize",
     },
@@ -75,8 +78,9 @@ export default function Story() {
   return (
     <Paper className={classes.root}>
         <NavBar/>
+        <Grid className={classes.container}>
         <Grid container xs={12} style={{margin:"5vh 0 5vh 0"}}>
-            <Grid item xs={8} style={{marginLeft:"5%"}}>
+            <Grid item xs={8} >
                 <Typography variant="h5">
                     <strong>Your Stories</strong>
                 </Typography>
@@ -86,20 +90,21 @@ export default function Story() {
                 <Button variant="outlined" color="primary" className={classes.button}>Write a story</Button>
             </Grid>
         </Grid>
-        <AppBar position="static" color="inherit" >
+        <AppBar position="static" color="inherit" style={{boxShadow:"none"}}  >
             <Grid item xs={3} >
                 <Tabs
                 variant="fullWidth"
                 value={value}
                 onChange={handleChange}
-                aria-label="nav tabs example"            
+                aria-label="nav tabs example" 
+                          
                 >
                     <LinkTab className={classes.button} label="Drafts 1" href="/drafts" {...a11yProps(0)} />
                     <LinkTab className={classes.button} label="Published" href="/trash" {...a11yProps(1)} /> 
                 </Tabs>
             </Grid>
         </AppBar>
-        <TabPanel value={value} index={0}>
+        <TabPanel value={value} index={0} >
             <Grid item xs={12} style={{textAlign:"center ", minHeight:"40vh",marginTop:"8%"}}>
                 <Typography>You have no drafts</Typography>
                 <Typography>Write on the go with our iOS and android apps</Typography>
@@ -111,6 +116,7 @@ export default function Story() {
                 <Typography>Write now</Typography>
             </Grid>
         </TabPanel>
+        </Grid>
     </Paper>
   );
 }

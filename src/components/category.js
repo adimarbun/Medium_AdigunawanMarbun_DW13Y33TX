@@ -55,7 +55,7 @@ export default function Category() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="inhiret">
+      <AppBar position="static" color="inhiret" style={{boxShadow:"none"}}>
         <Tabs
           value={value}
           onChange={handleChange}

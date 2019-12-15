@@ -1,0 +1,19 @@
+.grid-profile{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.paper-content{
+    padding: 10px;
+    margin-top: 20px;
+}
+.image{
+    width: 100%;
+    margin:20px 0;
+    height: 250px;
+}
+.responses{
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+}
