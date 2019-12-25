@@ -1,0 +1,8 @@
+.root {
+  flex-grow: 1;
+  margin: 0 14%;
+}
+.paper {
+  margin-left: 50px;
+}
+

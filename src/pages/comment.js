@@ -32,7 +32,7 @@ class Comment extends Component {
           image: "DW",
           like: "200k",
           responses: "200",
-          date: "4 january 2020",
+          date: "1 january 2020",
           content:
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
         },
@@ -70,22 +70,26 @@ class Comment extends Component {
               <Grid
                 container
                 wrap="nowrap"
-                style={{ width: "62vw", margin: "10px 10px 10px 10px" }}
+                style={{ width: "62vw", margin: "10px" }}
               >
-                <Grid item xs={9} style={{ margin: "10px 10px 10px 10px" }}>
+                <Grid item xs={9} style={{ margin: "10px " }}>
                   <Typography variant="h5">
                     10 bad habbits of unseccusfull people
                   </Typography>
                   <p>Adi Marbun</p>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid
+                  item
+                  xs={3}
+                  style={{ display: "flex", justifyContent: "flex-end" }}
+                >
                   <IconButton>
                     <ThumbUpAltIcon color="primary" />
-                    300k
+                    <Typography>300k</Typography>
                   </IconButton>
                   <IconButton>
                     <ChatBubbleOutlineIcon color="primary" />
-                    1.5 k
+                    <Typography>1.5 k</Typography>
                   </IconButton>
                 </Grid>
               </Grid>
@@ -98,14 +102,14 @@ class Comment extends Component {
               <Typography variant="h5">
                 <strong>Responses</strong>
               </Typography>
-              <Paper style={{ margin: "20px 0 20px 0" }}>
+              <Paper style={{ margin: "20px 0" }}>
                 <Grid
                   container
                   wrap="nowrap"
                   style={{ width: "62vw", margin: "10px 0 10px 0" }}
                 >
                   <Grid item xs={1}>
-                    <Fab color="secondary" aria-label="image">
+                    <Fab color="secondary" style={{ marginLeft: "10px" }}>
                       A
                     </Fab>
                   </Grid>
@@ -120,15 +124,16 @@ class Comment extends Component {
                 </Grid>
               </Paper>
               {this.state.follow.map(followItem => (
-                <Paper style={{ margin: "10px 0 10px 0" }}>
+                <Paper style={{ margin: "10px 0" }}>
                   <Grid>
                     <Grid
                       container
                       wrap="nowrap"
-                      style={{ width: "62vw", margin: "10px 0 0 0" }}
+                      style={{ width: "62vw", marginTop: "10px " }}
                     >
                       <Grid item xs={1}>
                         <Fab
+                          style={{ marginLeft: "10px" }}
                           color="primary"
                           aria-label="image"
                           key={followItem.image}
@@ -140,7 +145,9 @@ class Comment extends Component {
                         <Typography variant="h6" key={followItem.id}>
                           <strong>{followItem.name}</strong>
                         </Typography>
-                        <p key={followItem.id}>{followItem.date}</p>
+                        <Typography key={followItem.id}>
+                          {followItem.date}
+                        </Typography>
                       </Grid>
                     </Grid>
                   </Grid>
@@ -161,10 +168,19 @@ class Comment extends Component {
                     <Grid item xs={9} style={{ margin: "0 10px 10px 0" }}>
                       <IconButton>
                         <ThumbUpAltIcon color="primary" key={followItem.id} />
-                        {followItem.like}
+                        <Typography>{followItem.like}</Typography>
                       </IconButton>
                     </Grid>
-                    <Grid item xs={3} key={followItem.id}>
+                    <Grid
+                      item
+                      xs={3}
+                      key={followItem.id}
+                      style={{
+                        display: "flex",
+                        justifyContent: "flex-end",
+                        alignItems: "center"
+                      }}
+                    >
                       {followItem.responses} Responses
                       <IconButton>
                         <BookmarkIcon color="primary" />

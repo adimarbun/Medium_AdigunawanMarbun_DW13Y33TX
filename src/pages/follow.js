@@ -107,12 +107,14 @@ class Follow extends Component {
                   <Grid
                     container
                     wrap="nowrap"
-                    style={{ width: "60vw", margin: "10px 0 10px 0" }}
+                    style={{
+                      margin: "10px 0 10px 0"
+                    }}
                   >
                     <Grid item xs={1}>
                       <Fab
+                        style={{ marginLeft: "10px" }}
                         color="secondary"
-                        aria-label="image"
                         key={followItem.id}
                       >
                         {followItem.image}
@@ -130,7 +132,11 @@ class Follow extends Component {
                       <Button
                         variant="outlined"
                         href="#outlined-buttons"
-                        style={{ textTransform: "capitalize", color: "green" }}
+                        style={{
+                          textTransform: "capitalize",
+                          color: "green",
+                          marginLeft: "30px"
+                        }}
                       >
                         Follow
                       </Button>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -8,9 +8,10 @@ import IconButton from "@material-ui/core/IconButton";
 import Fab from "@material-ui/core/Fab";
 import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
-import TextareaAutosize from "@material-ui/core/TextareaAutosize";
 import Grid from "@material-ui/core/Grid";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
+import CKEditor from "@ckeditor/ckeditor5-react";
+import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -26,15 +27,23 @@ const useStyles = makeStyles(theme => ({
 
 export default function NewStory() {
   const classes = useStyles();
+  const [value, setValue] = useState(" ");
+
+  const handleOnChange = (e, editor) => {
+    const data = editor.getData();
+    setValue(data);
+  };
 
   return (
     <div className={classes.root}>
       <AppBar position="static" color="inherit">
         <Toolbar>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTL3slOsyzlOfLxrimEWMWrrtob843HSb_P9P5Q_RCXXWheySIW"
-            style={{ width: "5vh" }}
-          ></img>
+          <IconButton href="home">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTL3slOsyzlOfLxrimEWMWrrtob843HSb_P9P5Q_RCXXWheySIW"
+              style={{ width: "5vh" }}
+            ></img>
+          </IconButton>
           <Typography variant="h6" className={classes.title}>
             Draft
           </Typography>
@@ -59,18 +68,10 @@ export default function NewStory() {
           </IconButton>
         </Grid>
         <Grid item xs={9}>
-          <TextareaAutosize
-            aria-label="empty textarea"
-            placeholder="Title"
-            style={{ width: "100%" }}
-          />
-          <TextareaAutosize
-            aria-label="empty textarea"
-            placeholder="Tell you story"
-            style={{ width: "100%", minHeight: "80vh" }}
-          />
+          <CKEditor editor={ClassicEditor} onChange={handleOnChange} />
         </Grid>
       </Grid>
+      <div>{value}</div>
     </div>
   );
 }
