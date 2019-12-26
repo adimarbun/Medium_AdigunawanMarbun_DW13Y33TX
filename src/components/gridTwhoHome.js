@@ -6,6 +6,7 @@ import { Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import Avatar from "@material-ui/core/Avatar";
 import axios from "axios";
+import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -50,21 +51,29 @@ export default function GridTwoHome() {
       <Grid container spacing={3} xs={12}>
         <Grid item xs={8}>
           {articles.map(item => (
-            <Grid container wrap="nowrap" spacing={2}>
-              <Grid item xs>
-                <Typography variant="h5">{item.title}</Typography>
-                <p style={{ color: "gray" }}>{item.content}</p>
-                <Typography style={{ fontSize: "14px" }}>
-                  {item.users.name} in {item.categories.name}
-                </Typography>
-                <Typography style={{ color: "gray", fontSize: "14px" }}>
-                  {item.createdAt}
-                </Typography>
+            <Link
+              href={`/articel/?${item.id}`}
+              color="inherit"
+              underline="none"
+            >
+              <Grid container wrap="nowrap" spacing={2}>
+                <Grid item xs>
+                  <Typography variant="h6">{item.title}</Typography>
+                  <Typography style={{ color: "gray", fontSize: "14px" }}>
+                    {item.content}
+                  </Typography>
+                  <Typography style={{ fontSize: "14px", marginTop: "10px" }}>
+                    {item.users.name} in {item.categories.name}
+                  </Typography>
+                  <Typography style={{ color: "gray", fontSize: "14px" }}>
+                    {item.createdAt}
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <img className={classes.image} src={item.img} />
+                </Grid>
               </Grid>
-              <Grid item>
-                <img className={classes.image} src={item.img} />
-              </Grid>
-            </Grid>
+            </Link>
           ))}
         </Grid>
         <Grid item xs>
@@ -78,9 +87,13 @@ export default function GridTwoHome() {
                 <Avatar>{populerNumber++}</Avatar>
               </Grid>
               <Grid item xs>
-                <Typography variant="h6">{item.title}</Typography>
-                <Typography>{item.createdAt}</Typography>
-                <Typography>
+                <Typography style={{ fontSize: "15px", fontWeight: "bold" }}>
+                  {item.title}
+                </Typography>
+                <Typography style={{ fontSize: "12px" }}>
+                  {item.createdAt}
+                </Typography>
+                <Typography style={{ fontSize: "12px" }}>
                   {item.users.name} in {item.categories.name}
                 </Typography>
               </Grid>

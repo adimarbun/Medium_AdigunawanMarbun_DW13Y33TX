@@ -77,8 +77,12 @@ export default function NavBar() {
   const handleMobileMenuOpen = event => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
-
+  const signOut = () => {
+    localStorage.clear();
+    window.location = "/login";
+  };
   const menuId = "primary-search-account-menu";
+
   const renderMenu = (
     <Menu
       anchorEl={anchorEl}
@@ -140,7 +144,7 @@ export default function NavBar() {
         <MenuItem>Setting</MenuItem>
         <MenuItem>Help</MenuItem>
         <MenuItem>
-          <Link href="login" color="inherit" underline="none">
+          <Link color="inherit" underline="none" onClick={signOut}>
             SignOut
           </Link>
         </MenuItem>

@@ -120,7 +120,7 @@ class Follow extends Component {
                         {followItem.image}
                       </Fab>
                     </Grid>
-                    <Grid item xs={9}>
+                    <Grid item xs={9}> 
                       <Typography variant="h5" key={followItem.id}>
                         {followItem.name}
                       </Typography>

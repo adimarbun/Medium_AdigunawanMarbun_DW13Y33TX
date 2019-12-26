@@ -1,82 +1,74 @@
-import React, { Component } from 'react'
-import Register from './pages/register'
-import Login from './pages/login'
-import Home from './pages/home'
-import CategoryPage from './pages/categoryPage'
-import ArticelDetail from './pages/articelDetail'
-import RelatedArticle from './pages/relatedArticle'
-import Follow from './pages/follow'
-import Comment from './pages/comment'
-import NewStory from './pages/newStory'
-import Story from './pages/story'
-import Stats from './pages/stats'
-import Bookmark from './pages/bookmark'
-import Profile from './pages/profile'
-import ArticleByPerson from './pages/articleByPerson'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
-
+import React, { Component } from "react";
+import Register from "./pages/register";
+import Login from "./pages/login";
+import Home from "./pages/home";
+import CategoryPage from "./pages/categoryPage";
+import ArticelDetail from "./pages/articelDetail";
+import RelatedArticle from "./pages/relatedArticle";
+import Follow from "./pages/follow";
+import Comment from "./pages/comment";
+import NewStory from "./pages/newStory";
+import Story from "./pages/story";
+import Stats from "./pages/stats";
+import Bookmark from "./pages/bookmark";
+import Profile from "./pages/profile";
+import ArticleByPerson from "./pages/articleByPerson";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 class App extends Component {
- 
- render(){
-   return(
-     <Router >
-       <Switch>
+  render() {
+    return (
+      <Router>
+        <Switch>
           <Route path="/login">
             <Login />
           </Route>
           <Route path="/regiter">
-            <Register/>
+            <Register />
           </Route>
           <Route path="/categoryPage">
-            <CategoryPage/>
+            <CategoryPage />
           </Route>
-          <Route path="/articelDetail">
-            <ArticelDetail/>
+          <Route path="/articel">
+            <ArticelDetail />
           </Route>
           <Route path="/follow">
-            <Follow/>
+            <Follow />
           </Route>
           <Route path="/comment">
-            <Comment/>
+            <Comment />
           </Route>
           <Route path="/relatedArticle">
-            <RelatedArticle/>
+            <RelatedArticle />
           </Route>
           <Route path="/newStory">
-            <NewStory/>
+            <NewStory />
           </Route>
           <Route path="/story">
-            <Story/>
+            <Story />
           </Route>
           <Route path="/stats">
-            <Stats/>
+            <Stats />
           </Route>
           <Route path="/bookmark">
-            <Bookmark/>
+            <Bookmark />
           </Route>
           <Route path="/profile">
-            <Profile/>
+            <Profile />
           </Route>
           <Route path="/register">
-            <Register/>
+            <Register />
           </Route>
           <Route path="/articleByPerson">
-            <ArticleByPerson/>
+            <ArticleByPerson />
           </Route>
           <Route path="/">
             <Home />
           </Route>
         </Switch>
-     </Router>
-   );
- }
+      </Router>
+    );
+  }
 }
- 
 
 export default App;
-

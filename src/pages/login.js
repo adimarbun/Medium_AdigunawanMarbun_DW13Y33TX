@@ -8,47 +8,40 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import "../App.css";
+import { login } from "../config/api";
 
 class Login extends Component {
-  documentData;
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+  constructor() {
+    super();
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      errors: {}
     };
+
+    this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
   }
 
-  handleChange = e => {
+  onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
-  };
-  // on form submit...
-  handleFormSubmit(e) {
-    e.preventDefault();
-    localStorage.setItem("document", JSON.stringify(this.state));
-    this.setState({
-      email: "",
-      password: ""
-    });
   }
+  onSubmit(e) {
+    e.preventDefault();
 
-  // React Life Cycle
-  componentDidMount() {
-    this.documentData = JSON.parse(localStorage.getItem("document"));
+    const user = {
+      email: this.state.email,
+      password: this.state.password
+    };
 
-    if (localStorage.getItem("document")) {
-      this.setState({
-        email: this.documentData.email,
-        password: this.documentData.password
-      });
-    } else {
-      this.setState({
-        email: "",
-        password: ""
-      });
-    }
+    login(user).then(() => {
+      if (localStorage.getItem("tokenn")) {
+        window.location = "/";
+      } else {
+        window.location = "/login";
+        alert("Wrong Password or email");
+      }
+    });
   }
   render() {
     return (
@@ -64,11 +57,7 @@ class Login extends Component {
                 Enter the email address associated with your account,and we'll
                 send a magic link to your inbox.
               </p>
-              <form
-                onSubmit={this.handleFormSubmit}
-                className="form-login"
-                novalidate
-              >
+              <form onSubmit={this.onSubmit} className="form-login" novalidate>
                 <TextField
                   variant="standard"
                   margin="normal"
@@ -77,7 +66,7 @@ class Login extends Component {
                   type="email"
                   id="email"
                   value={this.state.email}
-                  onChange={this.handleChange}
+                  onChange={this.onChange}
                   label="Email Address"
                   name="email"
                   autoComplete="email"
@@ -91,14 +80,13 @@ class Login extends Component {
                   name="password"
                   label="password"
                   value={this.state.password}
-                  onChange={this.handleChange}
+                  onChange={this.onChange}
                   type="password"
                   id="password"
                   autoComplete="current-password"
                 />
                 <Button
                   type="submit"
-                  href="home"
                   variant="contained"
                   color="primary"
                   style={{ marginTop: "40px" }}
